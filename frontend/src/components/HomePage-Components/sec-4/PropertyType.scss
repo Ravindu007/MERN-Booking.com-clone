@@ -1,0 +1,14 @@
+.propertyTypes{
+  padding: 50px 0px;
+
+  .carousel-property{
+
+    .slick-slide{
+      padding: 5px;
+      
+      .slick-prev:before, .slick-next:before {
+        color: red;
+      }
+    }
+  }
+}

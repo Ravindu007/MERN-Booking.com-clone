@@ -23,17 +23,21 @@ const Navbar = () => {
 
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item txt">
-                      <Link className="nav-link" href="/">LKR</Link>
+                    <li>
+                      <Link className="txt" href="/">LKR</Link>
                     </li>
                     <li className="nav-item">
-                      <FontAwesomeIcon icon={faEarthAmericas} className='icon'/>
+                      <Link>
+                        <FontAwesomeIcon icon={faEarthAmericas} className='icon'/>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <FontAwesomeIcon icon={faCircleQuestion} className='icon'/>
+                      <Link>
+                        <FontAwesomeIcon icon={faCircleQuestion} className='icon'/>
+                      </Link>
                     </li>
-                    <li className="nav-item text">
-                      <Link className='nav-link'>List your property</Link>
+                    <li>
+                      <Link className='txt'>List your property</Link>
                     </li>
                     <button className="nav-item">
                       <Link className='nav-link'>Register</Link>
@@ -56,7 +60,7 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <Link className='nav-item'>
+                <Link className='nav-item active'>
                   <FontAwesomeIcon icon={faBed} className='icon'/>
                   <span>Stays</span>
                 </Link>

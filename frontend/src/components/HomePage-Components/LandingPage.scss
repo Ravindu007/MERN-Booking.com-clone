@@ -1,9 +1,10 @@
-$backGround: #003580;
+$backGround: #003B95;
+$textColor:#fff;
 
 .sec-1{
   margin-top: 0;
   background-color: $backGround;
-  color: #fff;
+  color: $textColor;
   height: 240px;
   width: 100%;
   position: relative;
@@ -26,7 +27,7 @@ $backGround: #003580;
   position: absolute;
   width: 80%;
   height: 60px;
-  background: #fff;
+  background:$textColor;
   border: 5px solid gold;
   bottom: -30px;
   border-radius: 10px;
@@ -50,6 +51,18 @@ $backGround: #003580;
   }
 }
 
-.sec-2{
 
+
+.sec-2{
+  padding-top: 50px;
+  .row{
+    box-shadow: 0px 3px 8px grey;
+    border-radius: 10px;
+    padding: 8px;
+    .col-1{
+      button{
+        border: none;
+      }
+    }
+  }
 }

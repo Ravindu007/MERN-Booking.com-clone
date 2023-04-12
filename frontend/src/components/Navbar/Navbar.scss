@@ -1,13 +1,13 @@
-$backGround:#003580;
+$backGround:#003B95;
+$textColor:#fff;
 
 .navbar{
   background-color:$backGround ;
   font-weight: bold;
   
   .upper-part{
-
     .navbar-brand{
-      color: #fff;  
+      color: $textColor;  
     }
 
     ul{
@@ -17,32 +17,47 @@ $backGround:#003580;
       justify-content:flex-end;
       align-items: center;
 
+      .txt{
+        color:$textColor ;
+        text-decoration: none;
+      }
+
       .nav-item{
         margin: 0 10px;
       }
-
       .icon{
         height: 30px;
-        color: #fff;
+        color: $textColor;
       }
 
       button{
-        border: blue;
+        border: $backGround;
         border-radius: 5px;
       }
     }
   }
 
   .lower-part{
+    padding: 10px;
+
     .nav-item{
       display: flex;
+      justify-content: center;
       align-items: center;
       padding: 5px;
-      color: #fff;
-      margin-right: 50px;
-      
+      color: $textColor;
+      margin-right: 50px; 
+      height: 50px;
+      width: 92px;
     }
 
+    .active{
+      border: 1px solid;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+
+    // items inside nav-item
     .nav-item > * {
       margin:0px 2px;
     }

@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './LandingPage.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBed} from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 const LandingPage = () => {
+
+
+  const [showCoronaSupport, setShowCoronaSupport] = useState(false);
+
+  const handleShowSupport = () => {
+    setShowCoronaSupport(!showCoronaSupport)
+  }
+
   return (
     <div className='landingPage'>
         <div className="row">
@@ -43,9 +51,28 @@ const LandingPage = () => {
                 </div>
               </div>
             </form>
- 
           </div>
-          <div className="sec-2 col-12"></div>
+
+          <div className="sec-2 col-12">
+
+            <div className="container">
+              <div className="row">
+                <div className="col-11">
+                
+                <p>Coronavirus (COVID-19) support</p>
+                  {showCoronaSupport && (
+                      <p>Get the advice you need. Check the latest COVID-19 restrictions before you travel.</p>            
+                  )}
+                
+                </div>
+                <div className="col-1">
+                  <button onClick={handleShowSupport}>
+                    {showCoronaSupport ? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
   )

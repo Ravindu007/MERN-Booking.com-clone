@@ -1,0 +1,55 @@
+$backGround: #003580;
+
+.sec-1{
+  margin-top: 0;
+  background-color: $backGround;
+  color: #fff;
+  height: 240px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  h1{
+    margin-top: 70px;
+    font-size: 48px ;
+    font-weight: bold ;
+  }
+  p{
+    font-size: 24px;
+    margin-top: 4px;
+  }
+}
+
+
+.search-bar{
+  position: absolute;
+  width: 80%;
+  height: 60px;
+  background: #fff;
+  border: 5px solid gold;
+  bottom: -30px;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden  ;
+
+
+  .input{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 5px solid gold;
+  }
+
+  input, button{
+    height: 100%;
+    width: 100%;
+    color: #000;
+    font-weight: 600;
+  }
+}
+
+.sec-2{
+
+}

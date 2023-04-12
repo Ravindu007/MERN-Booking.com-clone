@@ -1,0 +1,27 @@
+.explore{
+  padding: 50px 0px;
+  height: fit-content;
+
+  /* Change the background color of the slides */
+  .slick-slide {
+    height:fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .text{
+      padding-top: 5px;
+      width: 80%;
+      justify-content: flex-start;
+      line-height: 0.8rem;
+    }
+  }
+
+  /* Change the color of the navigation arrows */
+  .slick-prev::before, .slick-next::before {
+    color: red;
+  }
+
+}

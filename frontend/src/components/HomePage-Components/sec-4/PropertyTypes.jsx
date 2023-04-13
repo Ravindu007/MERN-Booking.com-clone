@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import {useCarousel} from "../../../hooks/useCarousel"
 
 import "./PropertyType.scss"
 
 const PropertyTypes = () => {
+  const {slickCarousel} = useCarousel()
+
+  useEffect(()=>{
+    slickCarousel($('.carousel-property'), 4)
+  },[])
 
   const [properties, setProperties] = useState([
     {img:"./properties/pr1.jpeg",type:"Hotels", number:1521, id:1},
@@ -33,37 +39,9 @@ const PropertyTypes = () => {
       </div>
     </div>
   )
+
 }
 
-$(document).ready(function(){
-  $('.carousel-property').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 4,
-    slidesToScroll: 1,  
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-});
+
 
 export default PropertyTypes

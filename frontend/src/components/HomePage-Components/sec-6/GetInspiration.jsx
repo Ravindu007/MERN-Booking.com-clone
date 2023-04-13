@@ -3,6 +3,8 @@ import "./GetInspiration.scss"
 import { useCarousel } from '../../../hooks/useCarousel'
 
 const GetInspiration = () => {
+  
+  AOS.init(); //animation on scroll
 
   const {slickCarousel} = useCarousel()
 
@@ -17,7 +19,7 @@ const GetInspiration = () => {
   ])
 
   return (
-    <div className='getInspiration'>
+    <div data-aos="fade-left" data-aos-delay="200" className='getInspiration'>
       <div className="container">
         <h6>Get inspiration for your next trip</h6>
         <div className="row">

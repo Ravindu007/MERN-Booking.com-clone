@@ -6,6 +6,8 @@ import './EasyTripPlanner.scss'
 
 const EasyTripPlanner = () => {
 
+  AOS.init(); //animation on scroll
+
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{
@@ -24,7 +26,7 @@ const EasyTripPlanner = () => {
   ])
 
   return (
-    <div className='easyTripPlanner'>
+    <div className='easyTripPlanner' data-aos="fade-right" data-aos-delay="200">
       <div className="container">
         <h6>Quick and easy trip planner</h6>
         <p>Pick a vibe and explore the top destinations in Sri Lanka</p>

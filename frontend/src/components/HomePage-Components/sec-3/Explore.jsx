@@ -4,6 +4,9 @@ import "./Explore.scss"
 import {useCarousel} from "../../../hooks/useCarousel"
 
 const Explore = () => {
+
+  AOS.init(); //animation on scroll
+
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{
@@ -22,7 +25,7 @@ const Explore = () => {
   ])
   
   return (
-    <div className='explore'>
+    <div className='explore' data-aos="fade-right" data-aos-delay="200">
       <div className="container">
         <h6>Explore</h6>
         <p>These popular destinations have a lot to offer</p>

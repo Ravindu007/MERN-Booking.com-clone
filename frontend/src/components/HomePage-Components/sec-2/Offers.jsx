@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Offers.scss"
 const Offers = () => {
+  AOS.init(); //animation on scroll
+  
   return (
-    <div className='offers'>
+    <div className='offers' data-aos="fade-down" data-aos-delay="200">
       <div className="container">
       <h6>Offers</h6>
       <p>Promotions, deals, and special offers for you</p>

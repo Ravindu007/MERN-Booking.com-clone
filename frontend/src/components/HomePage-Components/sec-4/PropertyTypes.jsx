@@ -4,6 +4,8 @@ import {useCarousel} from "../../../hooks/useCarousel"
 import "./PropertyType.scss"
 
 const PropertyTypes = () => {
+  AOS.init(); //animation on scroll
+
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{
@@ -20,7 +22,7 @@ const PropertyTypes = () => {
 
 
   return (
-    <div className='propertyTypes'>
+    <div className='propertyTypes' data-aos="fade-left" data-aos-delay="200">
       <div className="container">
         <h6>Browse By Property Type</h6>
 

@@ -5,6 +5,9 @@ import { useCarousel } from '../../../hooks/useCarousel'
 
 const FavouriteHomes = () => {
 
+  AOS.init(); //animation on scroll
+
+
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{
@@ -19,7 +22,7 @@ const FavouriteHomes = () => {
     {img:"./favouriteHomes/h5.webp",propertyName:"RAMBLA BEACH Barcelonastuff Apartments", address:"Old Town, Poland, Kraków", price:"37797", rating:"8.6", numberOfReviews:"2133",id:5},
   ])
   return (
-    <div className='favouriteHomes'>
+    <div  className='favouriteHomes' data-aos="fade-right" data-aos-delay="200">
       <div className="container">
         <h6>Homes guests love</h6>
         <div className="home-carousel">

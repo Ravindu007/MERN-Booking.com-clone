@@ -6,6 +6,7 @@ import PropertyTypes from '../components/HomePage-Components/sec-4/PropertyTypes
 import EasyTripPlanner from '../components/HomePage-Components/sec-5/EasyTripPlanner'
 import GetInspiration from '../components/HomePage-Components/sec-6/GetInspiration'
 import FavouriteHomes from '../components/HomePage-Components/sec-7/FavouriteHomes'
+import Connect from '../components/HomePage-Components/sec-8/Connect'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <EasyTripPlanner/>
       <GetInspiration/>
       <FavouriteHomes/>
+      <Connect/>
     </div>
   )
 }

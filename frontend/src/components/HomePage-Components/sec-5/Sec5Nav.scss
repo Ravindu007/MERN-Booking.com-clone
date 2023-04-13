@@ -1,0 +1,20 @@
+.sec5Nav{
+  height: 50px;
+  padding: 5px 0px;
+
+  .nav-item{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .active{
+    border: 1px solid blue;
+    border-radius: 100px;
+  }
+
+  .nav-item:hover{
+    border: 1px solid blue;
+    border-radius: 100px;
+  }
+}

@@ -5,10 +5,11 @@
 
     .slick-slide{
       padding: 5px;
-      
-      .slick-prev:before, .slick-next:before{
-        color: red;
-      }
     }
+
+    .slick-prev:before, 
+      .slick-next:before {
+        color: blue;
+      }
   }
 }

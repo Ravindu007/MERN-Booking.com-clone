@@ -1,0 +1,32 @@
+.favouriteHomes{
+  padding: 50px 0px;
+  
+  .home-carousel{
+
+    .slick-track{
+      padding: 10px 0px;
+    }
+    
+    .home-item{
+      height: 399px;
+      margin: 0px 5px;
+      padding: 5px;
+      box-shadow: 0px 3px 8px grey;
+      border-radius: 10px;
+      line-height: 0.8rem;
+    }
+
+    .rating{
+      width: fit-content;
+      height: auto;
+      background-color: #003B95;
+      color: #fff;
+      padding: 5px;
+      border-radius: 8px;
+    }
+  }
+
+  .slick-next:before{
+    color: black;
+  }
+}

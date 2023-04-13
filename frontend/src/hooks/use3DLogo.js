@@ -1,11 +1,12 @@
 import * as THREE from "three"
 
 export const use3DLogo = () => {
-  const threeD = (canvasSpace, texture) => {
+
+  const threeD = (canvasSpace, texture , bgColor, geometry) => {
 
     // basic setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x003B95)
+    scene.background = new THREE.Color(bgColor)
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1 ,1000)
 
     const canvas = canvasSpace
@@ -24,11 +25,13 @@ export const use3DLogo = () => {
 
     const ambientLight = new THREE.AmbientLight(0xffffff)
     scene.add(pointLight,ambientLight)
+    
 
     // add object
     const logoTexture = new THREE.TextureLoader().load(texture)
+    
     const logo = new THREE.Mesh(
-      new THREE.BoxGeometry(15,15,15),
+      geometry,
       new THREE.MeshBasicMaterial({map:logoTexture})
     )
     scene.add(logo)

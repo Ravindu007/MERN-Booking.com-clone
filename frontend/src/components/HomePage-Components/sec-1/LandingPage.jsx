@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import * as THREE from "three"
 import './LandingPage.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +14,7 @@ const LandingPage = () => {
     // assets for 3D annimation
     const canvas = document.querySelector("#bg")
     const texture = "./b.png"
-    threeD(canvas,texture)
+    threeD(canvas,texture, 0x003B95, new THREE.BoxGeometry(15,15,15))
   })
 
   const [showCoronaSupport, setShowCoronaSupport] = useState(false);

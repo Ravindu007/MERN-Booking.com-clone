@@ -34,8 +34,8 @@ const EasyTripPlanner = () => {
           </div>
           <div className="col-12 places">
             <div className="carousel">
-            {places && places.map((place)=>(
-              <div key={place.id}>
+                {places && places.map((place)=>(
+                  <div key={place.id}>
                     <img src={place.img} alt="" className='img-fluid'/>
                     <div className="text">
                     <p>{place.placeName}</p>

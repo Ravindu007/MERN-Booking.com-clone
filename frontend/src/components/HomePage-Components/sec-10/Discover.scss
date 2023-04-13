@@ -1,5 +1,5 @@
 .discover{
-  padding: 50px 0px;
+  padding: 50px 15px;
 
   .box{
     height: 300px;
@@ -10,6 +10,18 @@
     align-items: center;
     overflow: hidden;
     box-shadow: 0px 3px 8px grey;
+  }
+
+  .box::before{
+    position: absolute;
+    content: '';
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background: yellow;
+    z-index: 10;
+    left: -20px;
+    bottom: 60px;
   }
   
   .center-part{
@@ -25,13 +37,19 @@
     justify-content: center;
     align-items: center;
 
-    h6{
-      z-index: 99;
-    }
+    .text{
+      padding-left: 10%;
+      width: 100%;
 
-    button{
-      background-color: #fff;
-      color: #003B95;
+      h6{
+        z-index: 99;
+      }
+  
+      button{
+        width: 80%;
+        background-color: #fff;
+        color: #003B95;
+      }
     }
   }
 

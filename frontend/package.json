@@ -19,7 +19,8 @@
     "react-router-dom": "^6.10.0",
     "sass": "^1.62.0",
     "scss": "^0.2.4",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "three": "^0.151.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

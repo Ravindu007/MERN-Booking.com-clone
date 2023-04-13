@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './LandingPage.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { use3DLogo } from '../../../hooks/use3DLogo'
 
 const LandingPage = () => {
 
+  const {threeD} = use3DLogo()
+  
+  useEffect(()=>{
+    // assets for 3D annimation
+    const canvas = document.querySelector("#bg")
+    const texture = "./b.png"
+    threeD(canvas,texture)
+  })
 
   const [showCoronaSupport, setShowCoronaSupport] = useState(false);
 
@@ -18,8 +27,15 @@ const LandingPage = () => {
         <div className="row">
           <div className="sec-1 col-12">
             <div className="container">
-              <h1>Find Your Next Stay</h1>
-              <p>Search deals on homes, hotels and much more...</p>
+              <div className="row">
+              <div className="col-7">
+                <h1>Find Your Next Stay</h1>
+                <p>Search deals on homes, hotels and much more...</p>
+              </div>
+              <div className="col-5">
+                <canvas id='bg'></canvas>
+              </div>
+              </div>
             </div>
 
             {/* search bar */}

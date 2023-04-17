@@ -1,0 +1,19 @@
+.footer{
+  font-size: x-small;
+
+  .copyRight{
+  }
+  .about{
+    display: flex;
+    justify-content: center;
+  }
+  .partners{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    img{
+      padding: 0px 40px;
+    }
+  }
+}

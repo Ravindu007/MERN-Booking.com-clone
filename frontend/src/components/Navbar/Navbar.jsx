@@ -37,7 +37,7 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className='txt'>List your property</Link>
+                      <Link className='txt' to="/listing">List your property</Link>
                     </li>
                     <button className="nav-item">
                       <Link className='nav-link'>Register</Link>

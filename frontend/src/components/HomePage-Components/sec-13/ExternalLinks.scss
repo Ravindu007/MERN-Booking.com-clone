@@ -1,0 +1,17 @@
+.externalLinks{
+  padding: 50px 0px;
+  .links{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+
+  .extranet{
+    display: flex;
+    justify-content: center;
+    
+    a{
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}

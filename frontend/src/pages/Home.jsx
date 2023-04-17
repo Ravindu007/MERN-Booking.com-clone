@@ -11,6 +11,8 @@ import Discount from '../components/HomePage-Components/sec-9/Discount'
 import Discover from '../components/HomePage-Components/sec-10/Discover'
 import Destination from '../components/HomePage-Components/sec-11/Destination'
 import Subscription from '../components/HomePage-Components/sec-12/Subscription'
+import ExternalLinks from '../components/HomePage-Components/sec-13/ExternalLinks'
+import Footer from '../components/HomePage-Components/sec-14/Footer'
 
 const Home = () => {
   return (
@@ -27,6 +29,8 @@ const Home = () => {
       <Discover/>
       <Destination/>
       <Subscription/>
+      <ExternalLinks/>
+      <Footer/>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import './LandingPage.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { use3DLogo } from '../../../hooks/use3DLogo'
+import Navbar from '../../Navbar/Navbar'
 
 const LandingPage = () => {
 
@@ -25,6 +26,7 @@ const LandingPage = () => {
 
   return (
     <div className='landingPage'>
+    <Navbar/>
         <div className="row">
           <div className="sec-1 col-12">
             <div className="container">

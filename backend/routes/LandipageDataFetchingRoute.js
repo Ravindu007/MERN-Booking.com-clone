@@ -1,11 +1,12 @@
 const express = require("express")
 
+// controllers
+const {fetchAllExploreData} = require("../controllers/frontEndFetchingControllers")
+
 const router = express.Router()
 
 // getting explore data
-router.get("/getExploreData",(req,res)=>{
-  res.json({msg:"Explore data fetched"})
-})
+router.get("/getExploreData", fetchAllExploreData )
 
 
 module.exports = router

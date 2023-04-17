@@ -7,17 +7,25 @@ const PropertyTypes = () => {
 
   const {slickCarousel} = useCarousel()
 
+  const [properties, setProperties] = useState(null)
+
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(()=>{
-    slickCarousel($('.carousel-property'), 4)
+    const fetchAllProperties = async()=>{
+      const response = await fetch("http://localhost:4000/api/frontendData/getAllProperties")
+      const json = await response.json()
+
+      if(response.ok){
+        setProperties(json)
+        setIsLoading(false)
+        slickCarousel($('.carousel-property'), 4)
+      }
+    }
+
+    fetchAllProperties()
   },[])
 
-  const [properties, setProperties] = useState([
-    {img:"./properties/pr1.jpeg",type:"Hotels", number:1521, id:1},
-    {img:"./properties/pr2.jpeg",type:"Apartments", number:700, id:2},
-    {img:"./properties/pr3.jpeg",type:"Resorts", number:348, id:3},
-    {img:"./properties/pr4.jpeg",type:"Villas", number:154, id:4},
-    {img:"./properties/pr5.jpeg",type:"Cabins", number:121, id:5},
-  ])
 
 
   return (
@@ -25,9 +33,10 @@ const PropertyTypes = () => {
       <div className="container">
         <h6>Browse By Property Type</h6>
 
-        <div className="carousel-property">
+        {isLoading ? <p>Loading</p> : (
+          <div className="carousel-property">
           {properties && properties.map((property)=>(
-            <div key={property.id}>
+            <div key={property._id}>
               <img src={property.img} alt="" className='img-fluid'/>
               <div className="text">
                 <p>{property.type}</p>
@@ -36,6 +45,7 @@ const PropertyTypes = () => {
             </div>
           ))}
         </div>
+        )}
 
       </div>
     </div>

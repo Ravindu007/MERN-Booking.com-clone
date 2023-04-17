@@ -20,8 +20,8 @@ const Home = () => {
       <LandingPage/>
       <Offers/> 
       <Explore/>
-      {/* <PropertyTypes/>
-      <EasyTripPlanner/>
+      <PropertyTypes/>
+      {/* <EasyTripPlanner/>
       <GetInspiration/>
       <FavouriteHomes/>
       <Connect/>

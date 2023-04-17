@@ -1,4 +1,5 @@
 const explorePlacesModel = require("../models/ExploreDataModel")
+const propertyModel = require("../models/PropertiesModel")
 
 const fetchAllExploreData = async(req,res)=>{
 
@@ -10,4 +11,14 @@ const fetchAllExploreData = async(req,res)=>{
   }
 }
 
-module.exports = {fetchAllExploreData}
+
+const fetchAllProperties = async(req,res) => {
+  try {
+    const allProperties = await propertyModel.find({})
+    res.status(200).json(allProperties)
+  } catch (error) {
+    res.status(400).json({error:error.message})
+  }
+}
+
+module.exports = {fetchAllExploreData, fetchAllProperties}

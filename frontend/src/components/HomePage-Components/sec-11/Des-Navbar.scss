@@ -1,5 +1,5 @@
-.sec5Nav{
-  height: 50px;
+.Des-Navbar{
+  height: auto;
   padding: 5px 0px;
   
   .navbar{
@@ -7,9 +7,10 @@
   }
 
   .nav-item{
-    width: 100px;
+    width: auto;
     display: flex;
     justify-content: center;
+    margin-right: 10px
   }
 
   .active{

@@ -9,6 +9,8 @@ import FavouriteHomes from '../components/HomePage-Components/sec-7/FavouriteHom
 import Connect from '../components/HomePage-Components/sec-8/Connect'
 import Discount from '../components/HomePage-Components/sec-9/Discount'
 import Discover from '../components/HomePage-Components/sec-10/Discover'
+import Destination from '../components/HomePage-Components/sec-11/Destination'
+import Subscription from '../components/HomePage-Components/sec-12/Subscription'
 
 const Home = () => {
   return (
@@ -23,6 +25,8 @@ const Home = () => {
       <Connect/>
       <Discount/>
       <Discover/>
+      <Destination/>
+      <Subscription/>
     </div>
   )
 }

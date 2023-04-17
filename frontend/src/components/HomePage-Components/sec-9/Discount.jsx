@@ -14,7 +14,7 @@ const Discount = () => {
   }) 
 
   return (
-    <div className="container">
+    <div className="container" data-aos="flip-up" data-aos-delay="200">
       <div className='discount'>
         <div className="row">
           <div className="col-3 threeD-art">

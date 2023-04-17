@@ -6,8 +6,6 @@ import './EasyTripPlanner.scss'
 
 const EasyTripPlanner = () => {
 
-  AOS.init(); //animation on scroll
-
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{

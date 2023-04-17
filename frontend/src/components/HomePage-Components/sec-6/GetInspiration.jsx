@@ -4,8 +4,6 @@ import { useCarousel } from '../../../hooks/useCarousel'
 
 const GetInspiration = () => {
   
-  AOS.init(); //animation on scroll
-
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{

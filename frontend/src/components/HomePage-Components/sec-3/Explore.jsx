@@ -5,7 +5,6 @@ import {useCarousel} from "../../../hooks/useCarousel"
 
 const Explore = () => {
 
-  AOS.init(); //animation on scroll
 
   const {slickCarousel} = useCarousel()
 

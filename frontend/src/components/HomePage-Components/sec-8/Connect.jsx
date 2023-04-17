@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import "./Connect.scss"
 const Connect = () => {
 
-  AOS.init()
-
   const [communities, setCommunities] = useState([
     {img:"./community/c1.jpg",name:"Sri Lanka",about:"Travel community", members:"77436", id:1},
     {img:"./community/c2.jpg",name:"Sri Lanka",about:"Travel community", members:"77436", id:2},

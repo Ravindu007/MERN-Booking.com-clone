@@ -5,9 +5,6 @@ import { useCarousel } from '../../../hooks/useCarousel'
 
 const FavouriteHomes = () => {
 
-  AOS.init(); //animation on scroll
-
-
   const {slickCarousel} = useCarousel()
 
   useEffect(()=>{

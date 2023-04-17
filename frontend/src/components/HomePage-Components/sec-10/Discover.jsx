@@ -4,7 +4,7 @@ import "./Discover.scss"
 
 const Discover = () => {
   return (
-    <div className="container">
+    <div className="container" data-aos="flip-down" data-aos-delay="200">
       <div className='discover'>
         <div className="row">
           <div className="col-12 box">

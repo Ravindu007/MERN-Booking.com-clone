@@ -4,7 +4,6 @@ import {useCarousel} from "../../../hooks/useCarousel"
 import "./PropertyType.scss"
 
 const PropertyTypes = () => {
-  AOS.init(); //animation on scroll
 
   const {slickCarousel} = useCarousel()
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Offers.scss"
 const Offers = () => {
-  AOS.init(); //animation on scroll
+
   
   return (
     <div className='offers' data-aos="fade-down" data-aos-delay="200">

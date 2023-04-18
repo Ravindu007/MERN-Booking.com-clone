@@ -21,16 +21,16 @@ const Home = () => {
       <Offers/> 
       <Explore/>
       <PropertyTypes/>
-      {/* <EasyTripPlanner/>
+      <EasyTripPlanner/>
       <GetInspiration/>
-      <FavouriteHomes/>
+      {/* <FavouriteHomes/>
       <Connect/>
       <Discount/>
       <Discover/>
       <Destination/>
       <Subscription/>
       <ExternalLinks/>
-      <Footer/> */}
+      <Footer/> */} 
     </div>
   )
 }

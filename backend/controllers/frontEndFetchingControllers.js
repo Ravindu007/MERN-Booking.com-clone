@@ -2,6 +2,7 @@ const explorePlacesModel = require("../models/ExploreDataModel")
 const propertyModel = require("../models/PropertiesModel")
 const tripPlacesModel = require("../models/TripPlacesModel")
 const insprationModel = require("../models/InspirationModel")
+const favouriteHomeModel = require("../models/favouriteHomeModel")
 
 
 const fetchAllExploreData = async(req,res)=>{
@@ -44,5 +45,13 @@ const fetchAllInspirations = async(req,res) => {
   }
 }
 
+const fetchAllFavouriteHomes = async(req,res) => {
+  try {
+    const allFavouriteHomes = await favouriteHomeModel.find({})
+    res.status(200).json(allFavouriteHomes)
+  } catch (error) {
+    res.status(400).json({error:error.message})
+  }
+}
 
-module.exports = {fetchAllExploreData, fetchAllProperties, fetchAllTripPLaces, fetchAllInspirations}
+module.exports = {fetchAllExploreData, fetchAllProperties, fetchAllTripPLaces, fetchAllInspirations,fetchAllFavouriteHomes}

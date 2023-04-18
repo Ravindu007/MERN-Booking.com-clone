@@ -23,8 +23,8 @@ const Home = () => {
       <PropertyTypes/>
       <EasyTripPlanner/>
       <GetInspiration/>
-      {/* <FavouriteHomes/>
-      <Connect/>
+      <FavouriteHomes/>
+      {/* <Connect/>
       <Discount/>
       <Discover/>
       <Destination/>

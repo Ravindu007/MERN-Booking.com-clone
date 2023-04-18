@@ -1,7 +1,7 @@
 const express = require("express")
 
 // controllers
-const {fetchAllExploreData,fetchAllProperties, fetchAllTripPLaces, fetchAllInspirations} = require("../controllers/frontEndFetchingControllers")
+const {fetchAllExploreData,fetchAllProperties, fetchAllTripPLaces, fetchAllInspirations, fetchAllFavouriteHomes} = require("../controllers/frontEndFetchingControllers")
 
 const router = express.Router()
 
@@ -16,5 +16,8 @@ router.get("/getTripPlaces", fetchAllTripPLaces)
 
 // getting inspirations
 router.get("/getInspirations", fetchAllInspirations)
+
+//getting favourite homes
+router.get("/getFavouriteHomes", fetchAllFavouriteHomes)
 
 module.exports = router

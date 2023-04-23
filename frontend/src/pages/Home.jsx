@@ -24,13 +24,13 @@ const Home = () => {
       <EasyTripPlanner/>
       <GetInspiration/>
       <FavouriteHomes/>
-      {/* <Connect/>
+      <Connect/>
       <Discount/>
       <Discover/>
       <Destination/>
       <Subscription/>
       <ExternalLinks/>
-      <Footer/> */} 
+      <Footer/> 
     </div>
   )
 }

@@ -8,18 +8,29 @@ $textColor:#fff;
   .col-6{
     height: 90vh;
     display: flex;
-    align-items: center;
-
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    
     .text{
       line-height: 0.8em;
-      color: #FFF;
       font-size: 48px ;
-      font-weight: bold ;  
+      font-weight: bold ; 
+      
+      h1{
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .h1{
+        color:aqua
+      }
     }
   }
 
   .right{
     padding: 50px;
+    color: #000;
 
     .box{
       width: 90%;
@@ -41,7 +52,7 @@ $textColor:#fff;
         font-size: small;
       }
 
-      button{
+      .btn-info{
         width: 100%;
       }
 

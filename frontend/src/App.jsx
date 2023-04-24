@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import ListingPage from './pages/ListingPage'
 import AOS from 'aos';
 import { useEffect } from 'react';
+import Profile from './pages/Profile';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/listing' element={<ListingPage/>}/>
+          <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
     </div>

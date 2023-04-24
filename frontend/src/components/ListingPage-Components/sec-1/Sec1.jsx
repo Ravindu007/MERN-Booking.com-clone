@@ -37,6 +37,9 @@ const Sec1 = () => {
               <h1 className='h1'></h1>
               <h1>on Booking.com</h1>
             </div>
+            <div className="text-btm">
+              <p>Registration is free and can take as little as 15 minutes to complete – get started today</p>
+            </div>
           </div>
           <div className="col-6 right">
             <div className="box">
@@ -56,7 +59,7 @@ const Sec1 = () => {
               <hr />
               <p>Create a partner account and get started</p>
               <p className='agree'>By creating you are agreed to let Booking.com email you regarding your properties</p>
-              <button className='btn btn-info'>Get started</button>
+              <Link className='btn btn-info' to="/profile">Start Listing</Link>
               <div className="btm">
                 <h6>Already started Registration</h6>
                 <Link>Continue your registration</Link>

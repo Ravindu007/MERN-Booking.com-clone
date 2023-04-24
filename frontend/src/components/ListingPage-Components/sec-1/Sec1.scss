@@ -1,0 +1,53 @@
+$backGround: #003B95;
+$textColor:#fff;
+
+.sec1{
+  height: 90vh;
+  background-color: $backGround;
+
+  .col-6{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    .text{
+      line-height: 0.8em;
+      color: #FFF;
+      font-size: 48px ;
+      font-weight: bold ;  
+    }
+  }
+
+  .right{
+    padding: 50px;
+
+    .box{
+      width: 90%;
+      height: 100%;
+      background-color: #FFF;
+      padding: 20px;
+
+      .item{
+        display: flex;
+        align-items: center;
+
+        p{
+          margin-top: 10px;
+          margin-left: 5px;
+        }
+      }
+
+      .agree{
+        font-size: small;
+      }
+
+      button{
+        width: 100%;
+      }
+
+      .btm{
+        padding-top: 10px;
+      }
+    }
+  }
+}

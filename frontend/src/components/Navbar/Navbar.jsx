@@ -6,7 +6,7 @@ import { faEarthAmericas, faCircleQuestion, faBed, faPlane, faTaxi, faTreeCity} 
 
 import './Navbar.scss'
 
-const Navbar = () => {
+const Navbar = ({parentComponent}) => {
   return (
     <div className="navbar">
       <div className="container">
@@ -51,35 +51,37 @@ const Navbar = () => {
           </div>
 
 
-          <div className="col-12 lower-part">
-          <nav className="navbar navbar-expand-lg">
-
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <Link className='nav-item active'>
-                  <FontAwesomeIcon icon={faBed} className='icon'/>
-                  <span>Stays</span>
-                </Link>
-                <Link className='nav-item'>
-                  <FontAwesomeIcon icon={faPlane} />
-                  <span>Flights</span>
-                </Link>
-                <Link className='nav-item'>
-                  <FontAwesomeIcon icon={faTaxi} />
-                  <span>Cars</span>
-                </Link> 
-                <Link className='nav-item'>
-                  <FontAwesomeIcon icon={faTreeCity} />
-                  <span>Attracts</span>
-                </Link>   
-              </ul>
+          {parentComponent === "/" && (
+            <div className="col-12 lower-part">
+            <nav className="navbar navbar-expand-lg">
+  
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+  
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <Link className='nav-item active'>
+                    <FontAwesomeIcon icon={faBed} className='icon'/>
+                    <span>Stays</span>
+                  </Link>
+                  <Link className='nav-item'>
+                    <FontAwesomeIcon icon={faPlane} />
+                    <span>Flights</span>
+                  </Link>
+                  <Link className='nav-item'>
+                    <FontAwesomeIcon icon={faTaxi} />
+                    <span>Cars</span>
+                  </Link> 
+                  <Link className='nav-item'>
+                    <FontAwesomeIcon icon={faTreeCity} />
+                    <span>Attracts</span>
+                  </Link>   
+                </ul>
+              </div>
+              </nav>
             </div>
-            </nav>
-          </div>
+          )}
         </div>
       </div>
     </div>

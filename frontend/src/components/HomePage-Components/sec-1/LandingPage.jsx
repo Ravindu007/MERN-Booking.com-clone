@@ -26,7 +26,7 @@ const LandingPage = () => {
 
   return (
     <div className='landingPage'>
-    <Navbar/>
+    <Navbar  parentComponent = "/" />
         <div className="row">
           <div className="sec-1 col-12">
             <div className="container">

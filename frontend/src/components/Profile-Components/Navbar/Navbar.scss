@@ -1,0 +1,20 @@
+$backGround: #003B95;
+$textColor:#fff;
+
+.profile-navbar{
+  border: 1px solid #000;
+  background-color: $backGround;
+  color: $textColor;
+
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .item{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+}

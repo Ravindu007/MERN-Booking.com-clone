@@ -59,7 +59,7 @@ const Sec1 = () => {
               <hr />
               <p>Create a partner account and get started</p>
               <p className='agree'>By creating you are agreed to let Booking.com email you regarding your properties</p>
-              <Link className='btn btn-info' to="/profile">Start Listing</Link>
+              <Link className='btn btn-info' to="/properties">Start Listing</Link>
               <div className="btm">
                 <h6>Already started Registration</h6>
                 <Link>Continue your registration</Link>

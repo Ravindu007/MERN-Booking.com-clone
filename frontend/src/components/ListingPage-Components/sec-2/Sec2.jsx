@@ -25,7 +25,7 @@ const Sec2 = () => {
         <div className="row middle">
           <div className="col-6">
             {rules && rules.map((rule)=>(
-              <div className="row rule">
+              <div className="row rule" key={rule}>
                 <div className="col-1">
                   <FontAwesomeIcon icon={faCircleCheck} />
                 </div>

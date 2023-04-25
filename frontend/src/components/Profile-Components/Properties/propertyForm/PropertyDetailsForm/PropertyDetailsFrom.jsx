@@ -61,7 +61,7 @@ const PropertyDetailsFrom = () => {
               />
             </div>
             <div className="btn-div">
-              <button className='btn btn-info'>Next</button>
+              <Link className='btn btn-info' to="/propertyForm/ownerDetails">Next</Link>
               <Link className='btn btn-secondary' to="/properties">Cancel</Link>
             </div>
           </form>

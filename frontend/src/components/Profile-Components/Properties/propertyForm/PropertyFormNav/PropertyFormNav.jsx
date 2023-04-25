@@ -19,7 +19,11 @@ const PropertyFormNav = () => {
       <div className="row">
         {navItems && navItems.map((item)=>(
           <Link className="col-3 item" key={item.id} to={item.to}>
-            <p><span className='num'>{item.num}</span>{item.item} </p>
+            
+              <span className='num'>{item.num}</span>
+              {item.item}
+              <hr />
+            
           </Link>
         ))}
       </div>

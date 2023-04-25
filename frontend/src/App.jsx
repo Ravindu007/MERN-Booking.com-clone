@@ -4,7 +4,7 @@ import ListingPage from './pages/ListingPage'
 import AOS from 'aos';
 import { useEffect } from 'react';
 import Property from './components/Profile-Components/Properties/Profile-Property-Component/Property';
-import PropertyForm from './components/Profile-Components/Properties/propertyForm/PropertyForm';
+import PropertyForm from './components/Profile-Components/Properties/propertyForm/PropertyBaseForm/PropertyForm';
 import PropertyDetailsFrom from './components/Profile-Components/Properties/propertyForm/PropertyDetailsForm/PropertyDetailsFrom';
 import OwnerDetailsForm from './components/Profile-Components/Properties/propertyForm/OwnerDetailsForm/OwnerDetailsForm';
 

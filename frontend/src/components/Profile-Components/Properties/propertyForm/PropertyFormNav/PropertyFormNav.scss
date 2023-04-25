@@ -1,10 +1,11 @@
 .propertyFormNav{
   .item{
-    border: 1px solid #000;
+    padding-left: 50px;
     display: flex;
     align-items: center;
     padding-top: 10px;
     color: #000;
+    font-size: 12px;
 
     .num{
       margin-right: 5px;
@@ -12,5 +13,11 @@
       border: 1px solid #000;
       border-radius: 100%;
     }
+
+    
+    hr{
+      width: 50%;
+    }  
+    
   }
 }

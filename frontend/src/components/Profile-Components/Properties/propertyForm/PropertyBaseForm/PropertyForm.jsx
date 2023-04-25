@@ -1,6 +1,8 @@
 import React from 'react'
-import PropertyFormNav from './PropertyFormNav/PropertyFormNav'
-import PropertyDetailsFrom from './PropertyDetailsForm/PropertyDetailsFrom'
+import PropertyFormNav from '../PropertyFormNav/PropertyFormNav'
+import PropertyDetailsFrom from '../PropertyDetailsForm/PropertyDetailsFrom'
+
+import "./PropertyForm.scss"
 
 const PropertyForm = () => {
   return (

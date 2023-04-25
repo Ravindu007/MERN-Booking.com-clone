@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropertyFormNav from '../PropertyFormNav/PropertyFormNav'
 
 import "./ManagerDetailsForm.scss"
@@ -6,7 +7,7 @@ import "./ManagerDetailsForm.scss"
 const ManagerDetailsFrom = () => {
   return (
     <div className='managerDetailsFrom'>
-      <PropertyFormNav/>
+      <PropertyFormNav parentComponent="/propertyForm/managerDetails"/>
       <div className="row">
 
         <div className="col-7">
@@ -42,7 +43,7 @@ const ManagerDetailsFrom = () => {
             
             <div className="btn-div">
               <Link className='btn btn-info'>Next</Link>
-              <Link className='btn btn-secondary' to="/propertyForm/ownerDetails">Cancel</Link>
+              <Link className='btn btn-secondary' to="/propertyForm/ownerDetails">Back</Link>
             </div>
            
           </form>

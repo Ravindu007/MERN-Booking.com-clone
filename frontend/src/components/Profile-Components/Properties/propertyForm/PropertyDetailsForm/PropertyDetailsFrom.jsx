@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const PropertyDetailsFrom = () => {
   return (
     <div className='PropertyDetailsFrom'>
-      <PropertyFormNav/>
+      <PropertyFormNav parentComponent="/propertyForm/propertyDetails"/>
       <div className="row">
         <div className="col-7">
           <form>

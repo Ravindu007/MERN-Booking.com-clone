@@ -3,7 +3,10 @@ import Home from './pages/Home'
 import ListingPage from './pages/ListingPage'
 import AOS from 'aos';
 import { useEffect } from 'react';
-import Property from './components/Profile-Components/Properties/Property';
+import Property from './components/Profile-Components/Properties/Profile-Property-Component/Property';
+import PropertyForm from './components/Profile-Components/Properties/propertyForm/PropertyForm';
+import PropertyDetailsFrom from './components/Profile-Components/Properties/propertyForm/PropertyDetailsForm/PropertyDetailsFrom';
+import OwnerDetailsForm from './components/Profile-Components/Properties/propertyForm/OwnerDetailsForm/OwnerDetailsForm';
 
 function App() {
 
@@ -18,6 +21,11 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/listing' element={<ListingPage/>}/>
           <Route path='/properties' element={<Property/>}/>
+          <Route path='/propertyForm' element={<PropertyForm/>}/>
+
+          {/* property Listing forms */}
+          <Route path='/propertyForm/propertyDetails' element={<PropertyDetailsFrom/>}/>
+          <Route path='/propertyForm/ownerDetails' element={<OwnerDetailsForm/>}/>
         </Routes>
       </BrowserRouter>
     </div>

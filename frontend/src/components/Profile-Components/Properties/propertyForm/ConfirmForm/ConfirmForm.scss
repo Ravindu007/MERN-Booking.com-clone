@@ -1,0 +1,14 @@
+.confirmForm{
+  .col-7{
+    padding: 40px;
+    
+    .btn-div{
+      display: flex;
+      justify-content: flex-end;
+
+      * {
+        margin-right: 5px
+      }
+    }
+  }
+}

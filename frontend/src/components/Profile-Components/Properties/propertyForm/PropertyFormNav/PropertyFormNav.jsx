@@ -12,14 +12,14 @@ const PropertyFormNav = ({parentComponent}) => {
       $(".i2").addClass("select")
     }else if(parentComponent === "/propertyForm/managerDetails"){
       $(".i3").addClass("select")
-    }else if(parentComponent === ".propertyForm/confirmation"){
+    }else if(parentComponent === "/propertyForm/confirmDetails"){
       $(".i4").addClass("select")
     }
   })
   
   const [navItems, setNavItems] = useState([
-    {num:"1", item:"Property Details",to:"/propertyForm/propertyDetails",class:"col-3 item i1", id:1},
-    {num:"2", item:"Owner Details",to:"/propertyForm/ownerDetails",class:"col-3 item i2", id:2},
+    {num:"1", item:"Property Details",to:"",class:"col-3 item i1", id:1},
+    {num:"2", item:"Owner Details",to:"",class:"col-3 item i2", id:2},
     {num:"3", item:"Manager Details",to:"",class:"col-3 item i3", id:3},
     {num:"4", item:"Confirmation",to:"",class:"col-3 item i4", id:4},
   ])

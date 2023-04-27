@@ -42,7 +42,7 @@ const ManagerDetailsFrom = () => {
             </div>
             
             <div className="btn-div">
-              <Link className='btn btn-info'>Next</Link>
+              <Link className='btn btn-info' to="/propertyForm/confirmDetails">Next</Link>
               <Link className='btn btn-secondary' to="/propertyForm/ownerDetails">Back</Link>
             </div>
            

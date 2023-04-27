@@ -8,6 +8,7 @@ import PropertyForm from './components/Profile-Components/Properties/propertyFor
 import PropertyDetailsFrom from './components/Profile-Components/Properties/propertyForm/PropertyDetailsForm/PropertyDetailsFrom';
 import OwnerDetailsForm from './components/Profile-Components/Properties/propertyForm/OwnerDetailsForm/OwnerDetailsForm';
 import ManagerDetailsFrom from './components/Profile-Components/Properties/propertyForm/ManagerDetailsForm/ManagerDetailsFrom';
+import ConfirmForm from './components/Profile-Components/Properties/propertyForm/ConfirmForm/ConfirmForm';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/propertyForm/propertyDetails' element={<PropertyDetailsFrom/>}/>
           <Route path='/propertyForm/ownerDetails' element={<OwnerDetailsForm/>}/>
           <Route path='/propertyForm/managerDetails' element={<ManagerDetailsFrom/>}/>
+          <Route path='/propertyForm/confirmDetails' element={<ConfirmForm/>}/>
         </Routes>
       </BrowserRouter>
     </div>

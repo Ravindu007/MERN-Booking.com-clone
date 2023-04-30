@@ -1,10 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import PropertyFormNav from '../PropertyFormNav/PropertyFormNav'
 
 import "./ManagerDetailsForm.scss"
+import { PropertyFormContext } from '../../../../../context/PropertyFormContext'
 
 const ManagerDetailsFrom = () => {
+  const navigate = useNavigate()
+  const {updateFormData} = useContext(PropertyFormContext)
+
+  const [managedBy, setManagedBy] = useState("")
+  const [governmentRepresentation, setGovernmentRepresentation] = useState("")
+  const [error, setError] = useState("")
+
+  const handleNext = () => {
+    updateFormData({
+      managedBy:managedBy,
+      governmentRepresentation:governmentRepresentation
+    })
+
+    navigate('/propertyForm/confirmDetails')
+  }
+
+  const validate = (e) => {
+    e.preventDefault()
+    if(!managedBy){
+      setError("Enter who is managing")
+    }else{
+      handleNext()
+    }
+  }
+
   return (
     <div className='managerDetailsFrom'>
       <PropertyFormNav parentComponent="/propertyForm/managerDetails"/>
@@ -17,6 +43,8 @@ const ManagerDetailsFrom = () => {
               <input
                 type="text" 
                 className="form-control" 
+                onChange={e=>setManagedBy(e.target.value)}
+                value={managedBy}
               />
             </div>
             <div className="form-group">
@@ -25,14 +53,28 @@ const ManagerDetailsFrom = () => {
               
               <div className="radio-div">
                   <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      name="flexRadioDefault" 
+                      id="flexRadioDefault1"
+                      onChange={e=>setGovernmentRepresentation(e.target.value)}
+                      value={governmentRepresentation}
+                    />
                     <label className="form-check-label">
                       Yes
                     </label>
                   </div>
 
                   <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      name="flexRadioDefault" 
+                      id="flexRadioDefault1"
+                      onChange={e=>setGovernmentRepresentation(e.target.value)}
+                      value={governmentRepresentation}
+                    />
                     <label className="form-check-label">
                       No
                     </label>
@@ -42,13 +84,15 @@ const ManagerDetailsFrom = () => {
             </div>
             
             <div className="btn-div">
-              <Link className='btn btn-info' to="/propertyForm/confirmDetails">Next</Link>
+              <button className='btn btn-info' onClick={validate}>Next</button>
               <Link className='btn btn-secondary' to="/propertyForm/ownerDetails">Back</Link>
             </div>
            
           </form>
         </div>
-        <div className="col-5"></div>
+        <div className="col-5">
+          <h6>{error}</h6>
+        </div>
       </div>
     </div>
   )

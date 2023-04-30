@@ -1,6 +1,11 @@
 .confirmForm{
   .col-7{
     padding: 40px;
+
+    h6{
+      text-decoration: underline;
+      text-decoration-color: blue;
+    }
     
     .btn-div{
       display: flex;

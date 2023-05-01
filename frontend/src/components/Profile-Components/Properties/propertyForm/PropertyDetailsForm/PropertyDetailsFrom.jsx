@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 
 import "./PropertyDetailsForm.scss"
@@ -17,7 +17,11 @@ const PropertyDetailsFrom = () => {
   const [town, setTown] = useState("")
   const [city, setCity] = useState("")
   const [country, setCountry] = useState("")
+  const [propertyImage1, setPropertyImage1] = useState(null)
+  const [propertyImage2, setPropertyImage2] = useState(null)
+  const [propertyImage3, setPropertyImage3] = useState(null)
   const [error, setError] = useState(null)
+
  
   const handleNext = () => {
     updateFormData({ 
@@ -32,6 +36,17 @@ const PropertyDetailsFrom = () => {
     
     navigate('/propertyForm/ownerDetails')
   };
+
+  useEffect(()=>{
+    const data = JSON.parse(localStorage.getItem('formData'));
+    setPropertyName(data.propertyName)
+    setAddress(data.address)
+    setUnitNumber(data.unitNumber) 
+    setZipCode(data.zipCode)
+    setTown(data.town)
+    setCity(data.city)
+    setCountry(data.country)
+  },[])
   
   const validate = (e) => {
     e.preventDefault()
@@ -59,8 +74,6 @@ const PropertyDetailsFrom = () => {
     }else{
       handleNext()
     }
-    
-
   }
 
   return (
@@ -130,6 +143,33 @@ const PropertyDetailsFrom = () => {
                 className='form-control'
                 onChange={e=>setCountry(e.target.value)}
                 value={country}
+              />
+            </div>
+            <div className="form-group">
+              <label>Property Image 1</label>
+              <input 
+                type="file" 
+                className='form-control'
+                onChange={e=>setPropertyImage1(e.target.files[0])}
+                name='propertyImage1'
+              />
+            </div>
+            <div className="form-group">
+              <label>Property Image 2</label>
+              <input 
+                type="file" 
+                className='form-control'
+                onChange={e=>setPropertyImage2(e.target.files[0])}
+                name='propertyImage2'
+              />
+            </div>
+            <div className="form-group">
+              <label>Property Image 3</label>
+              <input 
+                type="file" 
+                className='form-control'
+                onChange={e=>setPropertyImage3(e.target.files[0])}
+                name='propertyImage1'
               />
             </div>
             <div className="btn-div">

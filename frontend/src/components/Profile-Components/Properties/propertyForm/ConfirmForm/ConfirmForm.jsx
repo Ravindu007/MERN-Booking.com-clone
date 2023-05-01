@@ -1,14 +1,51 @@
 import React, { useContext, useEffect } from 'react'
 import PropertyFormNav from '../PropertyFormNav/PropertyFormNav'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import "./ConfirmForm.scss"
 import { PropertyFormContext } from '../../../../../context/PropertyFormContext'
 
 const ConfirmForm = () => {
-
+  const navigate = useNavigate()
 
   const {formData} = useContext(PropertyFormContext)
+
+  const handleSubmit = async(e) => {
+    e. preventDefault()
+
+    const formData1 = new FormData()
+    formData1.append('propertyName', formData.propertyName)
+    formData1.append('address', formData.address)
+    formData1.append('unitNumber', formData.unitNumber)
+    formData1.append('zipCode', formData.zipCode)
+    formData1.append('town', formData.town)
+    formData1.append('city', formData.city)
+    formData1.append('country', formData.country)
+    formData1.append('business', formData.business)
+    formData1.append('ownerName', formData.ownerName)
+    formData1.append('ownerNickName', formData.ownerNickName)
+    formData1.append('managedBy', formData.managedBy)
+    formData1.append('governmentRepresentation', formData.governmentRepresentation)
+
+
+    const response = await fetch("http://localhost:4000/api/properties/createNewProperty", {
+      method:"POST",
+      body:formData1
+    })
+    const json = await response.json()
+
+    if(response.ok){
+      console.log(json);
+      localStorage.removeItem('formData')
+      navigate("/propertyForm/successPage")
+    }
+
+  }
+
+
+  useEffect(()=>{
+    console.log();
+  },[])
 
   return (
     <div className='confirmForm'>
@@ -38,8 +75,8 @@ const ConfirmForm = () => {
 
           
           <div className="btn-div">
-            <Link className='btn btn-info'>Add</Link>
-            <Link className='btn btn-secondary' to="/propertyForm/ownerDetails">Back</Link>
+            <button className='btn btn-info' onClick={handleSubmit}>Add</button>
+            <Link className='btn btn-secondary' to="/propertyForm/managerDetails">Back</Link>
           </div>
         </div>
         <div className="col-5"></div>

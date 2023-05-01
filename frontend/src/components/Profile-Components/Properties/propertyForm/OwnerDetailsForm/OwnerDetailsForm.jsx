@@ -27,6 +27,13 @@ const OwnerDetailsForm = () => {
     navigate('/propertyForm/managerDetails')
   }
 
+  useEffect(()=>{
+    const data = JSON.parse(localStorage.getItem('formData'));
+    setBusiness(data.business)
+    setOwnerName(data.ownerName)
+    setOwnerNickName(data.ownerNickName) 
+  },[])
+
   const validate = (e) => {
     e.preventDefault()
     if(!business){

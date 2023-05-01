@@ -13,6 +13,11 @@ const ManagerDetailsFrom = () => {
   const [governmentRepresentation, setGovernmentRepresentation] = useState("")
   const [error, setError] = useState("")
 
+  useEffect(()=>{
+    const data = JSON.parse(localStorage.getItem('formData'));
+    setManagedBy(data.managedBy) 
+  },[])
+
   const handleNext = () => {
     updateFormData({
       managedBy:managedBy,

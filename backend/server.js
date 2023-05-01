@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 
 // routes
 const frontendDataFetchingRoutes = require("./routes/LandipageDataFetchingRoute")
+const propertyRoutes = require("./routes/PropertiesRoutes")
 
 const app = express()
 
@@ -23,7 +24,7 @@ app.use((req,res,next)=>{
 // routes
 app.use("/api/frontendData", frontendDataFetchingRoutes)
 
-
+app.use("/api/properties", propertyRoutes)
 
 
 // Data base connetion

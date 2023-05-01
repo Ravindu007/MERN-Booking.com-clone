@@ -11,6 +11,7 @@ router.get("/getExploreData", fetchAllExploreData )
 //getting properties
 router.get("/getAllProperties", fetchAllProperties)
 
+
 // getting places to gon on a trip
 router.get("/getTripPlaces", fetchAllTripPLaces)
 

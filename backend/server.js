@@ -2,6 +2,19 @@ require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
 
+
+// firebase storage 
+const admin = require("firebase-admin")
+const serviceAccount = require("./serviceAccount.json")
+
+admin.initializeApp({
+  credential:admin.credential.cert(serviceAccount),
+  storageBucket:process.env.STORAGE_BUCKET
+})
+
+module.exports = {admin:admin}
+
+
 // routes
 const frontendDataFetchingRoutes = require("./routes/LandipageDataFetchingRoute")
 const propertyRoutes = require("./routes/PropertiesRoutes")

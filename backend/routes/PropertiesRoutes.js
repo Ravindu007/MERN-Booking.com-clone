@@ -15,7 +15,6 @@ router.post("/createNewProperty", upload.fields([
   {name:'propertyImage1'},
   {name:'propertyImage2'},
   {name:'propertyImage3'},
-  {name:'propertyImage4'},
 ]), createProperty)
 
 

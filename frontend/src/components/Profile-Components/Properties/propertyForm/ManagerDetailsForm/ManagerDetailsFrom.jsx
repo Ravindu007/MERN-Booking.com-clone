@@ -52,40 +52,19 @@ const ManagerDetailsFrom = () => {
                 value={managedBy}
               />
             </div>
+
             <div className="form-group">
               <label>Government Representation</label>
-              <p>Is a government agency, government official, or close family members of government official involved in the ownership, control or management of the accomodation</p>
-              
-              <div className="radio-div">
-                  <div className="form-check">
-                    <input 
-                      className="form-check-input" 
-                      type="radio" 
-                      name="flexRadioDefault" 
-                      id="flexRadioDefault1"
-                      onChange={e=>setGovernmentRepresentation(e.target.value)}
-                      value={governmentRepresentation}
-                    />
-                    <label className="form-check-label">
-                      Yes
-                    </label>
-                  </div>
-
-                  <div className="form-check">
-                    <input 
-                      className="form-check-input" 
-                      type="radio" 
-                      name="flexRadioDefault" 
-                      id="flexRadioDefault1"
-                      onChange={e=>setGovernmentRepresentation(e.target.value)}
-                      value={governmentRepresentation}
-                    />
-                    <label className="form-check-label">
-                      No
-                    </label>
-                  </div>
-              </div>
-
+              <select 
+                name="" 
+                id=""
+                className='form-select'
+                onChange={e=>setGovernmentRepresentation(e.target.value)}
+                value={governmentRepresentation}
+              >
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
             </div>
             
             <div className="btn-div">

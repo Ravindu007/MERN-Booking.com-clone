@@ -26,6 +26,10 @@ const ConfirmForm = () => {
     formData1.append('ownerNickName', formData.ownerNickName)
     formData1.append('managedBy', formData.managedBy)
     formData1.append('governmentRepresentation', formData.governmentRepresentation)
+    formData1.append('propertyImage1', formData.propertyImage1)
+    formData1.append('propertyImage2', formData.propertyImage2)
+    formData1.append('propertyImage3', formData.propertyImage3)
+    
 
 
     const response = await fetch("http://localhost:4000/api/properties/createNewProperty", {
@@ -35,16 +39,16 @@ const ConfirmForm = () => {
     const json = await response.json()
 
     if(response.ok){
-      console.log(json);
+      console.log("upload successfully");
       localStorage.removeItem('formData')
-      navigate("/propertyForm/successPage")
+      navigate("/")
     }
 
   }
 
 
   useEffect(()=>{
-    console.log();
+    console.log(formData);
   },[])
 
   return (
@@ -72,6 +76,10 @@ const ConfirmForm = () => {
           <h6>Manager Details</h6>
           <p><span>Managed by: </span>{formData.managedBy}</p>
           <p><span>Government Representation: </span>{formData.governmentRepresentation}</p>
+
+          <p><span>Image 1: </span>{formData.propertyImage1.name}</p>
+          <p><span>Image 2: </span>{formData.propertyImage2.name}</p>
+          <p><span>Image 3: </span>{formData.propertyImage3.name}</p>
 
           
           <div className="btn-div">

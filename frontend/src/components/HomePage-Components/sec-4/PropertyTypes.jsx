@@ -37,10 +37,10 @@ const PropertyTypes = () => {
           <div className="carousel-property">
           {properties && properties.map((property)=>(
             <div key={property._id}>
-              <img src={property.img} alt="" className='img-fluid'/>
+              <img src={property.propertyImage1} alt="" className='img-fluid'/>
               <div className="text">
-                <p>{property.type}</p>
-                <p>{property.number} properties</p>
+                <p>{property.propertyName}</p>
+                <p>{property.unitNumber} properties</p>
               </div>
             </div>
           ))}

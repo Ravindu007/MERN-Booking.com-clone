@@ -17,9 +17,9 @@ const PropertyDetailsFrom = () => {
   const [town, setTown] = useState("")
   const [city, setCity] = useState("")
   const [country, setCountry] = useState("")
-  const [propertyImage1, setPropertyImage1] = useState(null)
-  const [propertyImage2, setPropertyImage2] = useState(null)
-  const [propertyImage3, setPropertyImage3] = useState(null)
+  const [propertyImage1, setPropertyImage1] = useState("")
+  const [propertyImage2, setPropertyImage2] = useState("")
+  const [propertyImage3, setPropertyImage3] = useState("")
   const [error, setError] = useState(null)
 
  
@@ -31,7 +31,10 @@ const PropertyDetailsFrom = () => {
       zipCode:zipCode,
       town:town,
       city:city,
-      country:country
+      country:country,
+      propertyImage1:propertyImage1,
+      propertyImage2:propertyImage2,
+      propertyImage3:propertyImage3
     })
     
     navigate('/propertyForm/ownerDetails')
@@ -39,13 +42,16 @@ const PropertyDetailsFrom = () => {
 
   useEffect(()=>{
     const data = JSON.parse(localStorage.getItem('formData'));
-    setPropertyName(data.propertyName)
+    setPropertyName(data.propertyName) //set form filed values when coming back
     setAddress(data.address)
     setUnitNumber(data.unitNumber) 
     setZipCode(data.zipCode)
     setTown(data.town)
     setCity(data.city)
     setCountry(data.country)
+    setPropertyImage1(data.propertyImage1)
+    setPropertyImage2(data.propertyImage2)
+    setPropertyImage3(data.propertyImage3)
   },[])
   
   const validate = (e) => {
@@ -150,8 +156,8 @@ const PropertyDetailsFrom = () => {
               <input 
                 type="file" 
                 className='form-control'
-                onChange={e=>setPropertyImage1(e.target.files[0])}
                 name='propertyImage1'
+                onChange={e=>setPropertyImage1(e.target.files[0])}
               />
             </div>
             <div className="form-group">
@@ -159,8 +165,8 @@ const PropertyDetailsFrom = () => {
               <input 
                 type="file" 
                 className='form-control'
-                onChange={e=>setPropertyImage2(e.target.files[0])}
                 name='propertyImage2'
+                onChange={e=>setPropertyImage2(e.target.files[0])}
               />
             </div>
             <div className="form-group">
@@ -169,7 +175,7 @@ const PropertyDetailsFrom = () => {
                 type="file" 
                 className='form-control'
                 onChange={e=>setPropertyImage3(e.target.files[0])}
-                name='propertyImage1'
+                name='propertyImage3'
               />
             </div>
             <div className="btn-div">
